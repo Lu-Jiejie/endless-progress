@@ -1,0 +1,67 @@
+{
+  "name": "endless-progress",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.5.0",
+  "description": "Endless progress...",
+  "author": "Lu-Jiejie <lu-jiejie@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Lu-Jiejie/endless-progress#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lu-Jiejie/endless-progress.git"
+  },
+  "bugs": "https://github.com/Lu-Jiejie/endless-progress/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "lint": "eslint .",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "nr build",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.23.0",
+    "@types/node": "^20.14.11",
+    "bumpp": "^9.4.1",
+    "eslint": "^9.7.0",
+    "esno": "^4.7.0",
+    "lint-staged": "^15.2.7",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.5.3",
+    "unbuild": "^2.0.0",
+    "vitest": "^2.0.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
