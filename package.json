@@ -44,7 +44,8 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "nr build",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "play": "nr -C playground dev"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.23.0",
