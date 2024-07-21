@@ -1,9 +1,9 @@
 {
   "name": "endless-progress",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@9.5.0",
-  "description": "Endless progress...",
+  "description": "A simple endless progress number generator.",
   "author": "Lu-Jiejie <lu-jiejie@outlook.com>",
   "license": "MIT",
   "homepage": "https://github.com/Lu-Jiejie/endless-progress#readme",
@@ -12,7 +12,11 @@
     "url": "git+https://github.com/Lu-Jiejie/endless-progress.git"
   },
   "bugs": "https://github.com/Lu-Jiejie/endless-progress/issues",
-  "keywords": [],
+  "keywords": [
+    "progress",
+    "endless progress",
+    "fake progress"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
